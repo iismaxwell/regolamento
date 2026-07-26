@@ -1,0 +1,81 @@
+<script>
+// Rifiniture della navbar dopo il render di Quarto: copia-link per articolo
+// (D34 §3) e allineamento del menu "Scarica".
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("h2[id^='art-']").forEach(function (heading) {
+    var btn = document.createElement("button");
+    btn.className = "copy-link-btn";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Copia il link a questo articolo");
+    if (window.iconaMaxwell) {
+      btn.appendChild(window.iconaMaxwell("link-simple"));
+    } else {
+      btn.textContent = "🔗";
+    }
+    btn.addEventListener("click", function () {
+      var url = window.location.origin + window.location.pathname + "#" + heading.id;
+      navigator.clipboard.writeText(url).then(function () {
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.classList.remove("copied");
+        }, 2000);
+      });
+    });
+    heading.appendChild(btn);
+  });
+
+  // Il menu "Scarica" (PDF/DOCX) è tra gli ultimi elementi a destra della
+  // navbar: senza allineamento a destra, il menu a comparsa esce dal bordo
+  // dello schermo sui desktop stretti.
+  document.querySelectorAll(".quarto-navigation-tool.dropdown-toggle").forEach(function (toggle) {
+    var menu = toggle.nextElementSibling;
+    if (menu && menu.classList.contains("dropdown-menu")) {
+      menu.classList.add("dropdown-menu-end");
+    }
+  });
+
+  // Testata dell'indice: accanto al logo va il nome dell'istituto su due righe
+  // (specifica di design). Quarto genera nella sidebar il solo logo, preso da
+  // _brand.yml; il nome si aggiunge qui perché nessuna opzione YAML lo prevede.
+  document.querySelectorAll(".sidebar-logo-link").forEach(function (link) {
+    if (link.querySelector(".sidebar-brand-text")) return;
+    var brand = document.createElement("span");
+    brand.className = "sidebar-brand-text";
+    brand.innerHTML = "IIS J. C. Maxwell<br>Nichelino";
+    link.appendChild(brand);
+  });
+
+  // Allineamento del marchio in barra di navigazione alla colonna dell'indice:
+  // il layout del contenuto è una griglia calcolata da Quarto, mentre la barra
+  // sta fuori da quella griglia e partiva dal bordo della finestra. Qui si legge
+  // la posizione reale del marchio nell'indice e la si passa al CSS, che la usa
+  // come margine della barra (v. --navbar-align in assets/common.scss).
+  function allineaNavbar() {
+    if (window.innerWidth < 992) {
+      document.documentElement.style.removeProperty("--navbar-align");
+      return;
+    }
+    var ancora = document.querySelector("#quarto-sidebar .sidebar-logo-link") ||
+                 document.getElementById("quarto-sidebar");
+    if (!ancora) return;
+    var x = Math.round(ancora.getBoundingClientRect().left);
+    if (x > 0) {
+      document.documentElement.style.setProperty("--navbar-align", x + "px");
+    }
+  }
+  allineaNavbar();
+  window.addEventListener("resize", allineaNavbar);
+
+  // Pagine come il changelog includono un file che porta con sé il proprio
+  // titolo: rimuove il secondo H1 quando ripete lo stesso testo del titolo
+  // della pagina, invece di mostrarlo due volte.
+  var pageTitle = document.querySelector("h1.title");
+  if (pageTitle) {
+    document.querySelectorAll("main h1").forEach(function (h) {
+      if (h !== pageTitle && h.textContent.trim() === pageTitle.textContent.trim()) {
+        h.remove();
+      }
+    });
+  }
+});
+</script>

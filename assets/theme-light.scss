@@ -1,0 +1,38 @@
+/*-- scss:defaults --*/
+
+// Redesign editoriale — tema chiaro (specifica tipografica per Quarto, proposta 1b).
+// Base: tema "litera"; qui si sovrascrivono colori, font e scala tipografica.
+// Titoli in Cormorant Garamond, corpo in Lora: i font sono importati da Google
+// Fonts in _quarto.yml. NB: reintroduce una richiesta a CDN esterno, in deroga
+// alla scelta "nessun font da CDN" di D34 — punto rimesso a Marco (v. changelog di sessione).
+
+// --- Palette (§2) ---------------------------------------------------------
+$body-bg:    #f3f2f2;   // sfondo pagina
+$body-color: #201f1d;   // testo
+
+// Accento bronzo: usato come tratto (bordi, numeri, marcatori), mai come riempimento pieno.
+$primary:    #b68235;   // accento
+$link-color: #7d5411;   // gradino a contrasto AA: link, rimandi a nota, numerazione articoli
+
+$sidebar-bg: #eae9e9;   // superficie sidebar / box avviso
+
+// Navbar: superficie neutra, non riempimento d'accento (§2: l'accento è tratto, mai fill).
+$navbar-bg: #eae9e9;
+$navbar-fg: $body-color;
+
+// --- Scala tipografica (§3) ----------------------------------------------
+$font-family-base:     "Lora", Georgia, serif;
+$font-family-serif:    "Lora", Georgia, serif;
+
+$headings-font-family: "Cormorant Garamond", Georgia, serif;
+$headings-font-weight: 600;
+$headings-color:       $body-color;
+
+$h1-font-size: 2.6rem;
+$h2-font-size: 1.9rem;
+$h3-font-size: 1.4rem;
+
+$toc-font-size: 0.82rem;
+
+// Le regole editoriali (corpo giustificato, note più piccole, sidebar, banner)
+// stanno in common.scss e usano queste variabili, così si adattano da sole al tema scuro.

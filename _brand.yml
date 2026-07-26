@@ -1,0 +1,8 @@
+logo:
+  images:
+    principale:
+      path: assets/logo.png
+      alt: "Logo dell'IIS J.C. Maxwell"
+  small: principale
+  medium: principale
+  large: principale

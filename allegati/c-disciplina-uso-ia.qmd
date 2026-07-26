@@ -1,0 +1,47 @@
+# Disciplina d’uso dell’intelligenza artificiale {.unnumbered .unlisted}
+
+Questo allegato costituisce parte integrante del regolamento ed è richiamato dall’art. 36. Disciplina l’uso di sistemi e strumenti di intelligenza artificiale nelle attività didattiche, educative e gestionali dell’Istituto. Con l’entrata in vigore del regolamento, esso sostituisce la circolare interna sull’utilizzo dell’intelligenza artificiale del 31 ottobre 2025, di cui recepisce l’impostazione prudenziale.
+
+## Art. C.1 — Finalità e principi {#art-c1 .unnumbered}
+
+1. L’Istituto promuove un uso dell’intelligenza artificiale rispettoso della centralità della persona, della sorveglianza e dell’intervento umano, della trasparenza, della proporzionalità, della non discriminazione e della protezione dei dati personali (art. 3, legge 23 settembre 2025, n. 132; decreto ministeriale 9 agosto 2025, n. 166).
+2. Le disposizioni del presente allegato si interpretano e si applicano in conformità al regolamento (UE) 2024/1689 del 13 giugno 2024 (di seguito «regolamento europeo sull’intelligenza artificiale») e alla legge 23 settembre 2025, n. 132 (art. 1, comma 2, L. 132/2025).
+3. L’intelligenza artificiale è impiegata come supporto all’attività didattica e amministrativa e non sostituisce l’interazione umana né il giudizio del docente (DM 166/2025).
+
+## Art. C.2 — Governance e responsabilità {#art-c2 .unnumbered}
+
+1. Il dirigente scolastico ha la responsabilità primaria della governance dei sistemi di intelligenza artificiale adottati dall’Istituto (DM 166/2025, § 3.1).
+2. Ogni progetto che introduce un sistema di intelligenza artificiale nelle attività dell’Istituto deve essere approvato dagli organi collegiali competenti ed essere coerente con il Piano triennale dell’offerta formativa; non è rimesso alla scelta del singolo docente o ufficio (DM 166/2025, § 4).
+3. Il dirigente scolastico individua un referente per l’intelligenza artificiale, con compiti di coordinamento didattico e tecnico, di raccordo con il curricolo e con il responsabile della protezione dei dati e di monitoraggio dell’uso dell’intelligenza artificiale nell’Istituto.
+4. Il dirigente scolastico può costituire un gruppo di lavoro per l’intelligenza artificiale, composto dal referente, dall’animatore digitale, dal responsabile della protezione dei dati e da docenti, con funzioni consultive, di monitoraggio e di proposta; il Collegio dei docenti può individuare una funzione strumentale dedicata all’innovazione digitale e all’intelligenza artificiale.
+5. L’uso di agenti di intelligenza artificiale che compiono azioni in autonomia deve essere autorizzato espressamente dal dirigente scolastico e prevede in ogni caso la supervisione umana delle azioni che l’agente può intraprendere.
+
+## Art. C.3 — Protezione dei dati personali {#art-c3 .unnumbered}
+
+1. L’introduzione di un sistema di intelligenza artificiale che comporti trattamento di dati personali è subordinata, prima dell’uso, agli adempimenti previsti dalla normativa sulla protezione dei dati: valutazione d’impatto sulla protezione dei dati (DPIA), informativa ai sensi degli artt. 13 e 14 del regolamento (UE) 2016/679, individuazione dei soggetti autorizzati e responsabili del trattamento, aggiornamento del registro dei trattamenti, coinvolgimento del responsabile della protezione dei dati e notifica di eventuali violazioni al Garante per la protezione dei dati personali entro 72 ore (DM 166/2025, § 3.3; regolamento (UE) 2016/679).
+2. Gli adempimenti di cui al comma 1 sono atti di competenza del dirigente scolastico e del responsabile della protezione dei dati; il presente allegato li richiama e ne subordina l’uso dell’intelligenza artificiale, ma non li sostituisce.
+3. Studentesse, studenti e famiglie hanno diritto di non partecipazione: possono scegliere che i dati personali non siano utilizzati per l’addestramento di sistemi di intelligenza artificiale, senza che ciò limiti l’accesso agli strumenti didattici (DM 166/2025, § 3.2).
+4. I servizi di intelligenza artificiale ad accesso diretto applicano l’esclusione dei minori di 13 anni e dei minorenni privi del consenso di chi esercita la responsabilità genitoriale (DM 166/2025; provvedimenti del Garante per la protezione dei dati personali n. 114/2023 e n. 755/2024).
+5. L’accesso alle tecnologie di intelligenza artificiale da parte dei minori di 14 anni e il conseguente trattamento dei dati personali richiedono il consenso di chi esercita la responsabilità genitoriale; il minorenne che abbia compiuto 14 anni può esprimere da sé il consenso al trattamento dei dati connessi all’uso di sistemi di intelligenza artificiale, purché le informazioni siano rese in forma facilmente accessibile e comprensibile (art. 4, comma 4, L. 132/2025).
+
+## Art. C.4 — Usi vietati e sistemi ad alto rischio {#art-c4 .unnumbered}
+
+1. È vietato l’uso di sistemi di intelligenza artificiale che individuano le emozioni delle studentesse e degli studenti e di sistemi di sentiment analysis nei loro confronti, salvo motivi medici o di sicurezza (art. 5 del regolamento europeo sull’intelligenza artificiale; DM 166/2025, § 1.1).
+2. Sono vietati i sistemi di intelligenza artificiale che attribuiscono un punteggio sociale alle persone e quelli di categorizzazione biometrica inferenziale (art. 5 del regolamento europeo sull’intelligenza artificiale).
+3. I sistemi di intelligenza artificiale usati per determinare l’accesso o l’ammissione, per valutare i risultati di apprendimento o per monitorare comportamenti vietati durante le prove sono sistemi ad alto rischio (allegato III del regolamento europeo sull’intelligenza artificiale): sono ammessi solo previa valutazione d’impatto sui diritti fondamentali (FRIA), valutazione d’impatto sulla protezione dei dati e adozione delle misure di sicurezza previste dal medesimo regolamento; in loro assenza sono vietati.
+4. È vietata la valutazione automatizzata delle studentesse e degli studenti e ogni decisione che li riguardi assunta senza supervisione umana (circolare interna sull’intelligenza artificiale del 31 ottobre 2025; coerente con l’allegato III del regolamento europeo sull’intelligenza artificiale).
+5. È vietato l’inserimento di dati personali, sensibili o identificativi di terzi negli strumenti di intelligenza artificiale non autorizzati dall’Istituto; la violazione può comportare conseguenze disciplinari, oltre a quelle previste dalla normativa sulla protezione dei dati.
+
+## Art. C.5 — Usi consentiti, dichiarazione dei materiali e formazione {#art-c5 .unnumbered}
+
+1. I docenti possono utilizzare strumenti di intelligenza artificiale per la progettazione didattica, a condizione di non inserirvi dati personali, di usarli in forma anonima e nel rispetto dei principi di minimizzazione e liceità del trattamento (circolare interna sull’intelligenza artificiale del 31 ottobre 2025).
+2. La studentessa e lo studente che producono a fini didattici materiali con l’ausilio dell’intelligenza artificiale devono dichiararlo esplicitamente, secondo le modalità concordate con il docente.
+3. La studentessa e lo studente restano responsabili, anche sul piano disciplinare, dei materiali prodotti con strumenti di intelligenza artificiale; la presentazione come propria di un contenuto generato dall’intelligenza artificiale, senza la dichiarazione di cui al comma 2, è valutata ai sensi della Parte VI.
+4. L’Istituto garantisce la formazione all’uso critico dell’intelligenza artificiale, compresi i limiti degli strumenti e il fenomeno delle risposte errate o inventate, come parte dell’alfabetizzazione in materia (art. 4 del regolamento europeo sull’intelligenza artificiale; DM 166/2025).
+
+## Art. C.6 — Monitoraggio, formazione e revisione {#art-c6 .unnumbered}
+
+1. Il referente e, ove costituito, il gruppo di lavoro per l’intelligenza artificiale monitorano annualmente l’uso dell’intelligenza artificiale nell’Istituto e ne riferiscono al dirigente scolastico e agli organi collegiali.
+2. L’Istituto assicura la formazione periodica dei docenti e del personale sull’uso critico, sicuro e conforme dell’intelligenza artificiale.
+3. Le regole del presente allegato si applicano anche al personale amministrativo, tecnico e ausiliario e agli uffici di segreteria, per gli strumenti di intelligenza artificiale impiegati nelle attività di rispettiva competenza.
+4. La disciplina d’uso dell’intelligenza artificiale è rivista almeno una volta l’anno, o quando mutano il quadro normativo o gli strumenti adottati; le proposte di aggiornamento sono presentate agli organi collegiali competenti secondo l’art. 49.

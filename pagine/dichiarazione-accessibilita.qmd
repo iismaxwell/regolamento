@@ -1,0 +1,39 @@
+# Dichiarazione di accessibilità {.unnumbered}
+
+Questo sito presenta una **proposta** di regolamento d'istituto, non un servizio erogato
+dall'amministrazione: l'obbligo formale di accessibilità (obiettivi annuali e dichiarazione
+tramite il modulo AgID, con le relative scadenze) riguarda il sito istituzionale della
+scuola, non questo documento di lavoro. Il sito è comunque progettato per rispettare i
+requisiti del **WCAG 2.1, livello AA**, per correttezza verso chi lo consulta e come
+riferimento per il sito istituzionale, non perché l'obbligo sia già scattato su questo
+repository.
+
+## Misure adottate
+
+- **Contrasto**: rapporto di almeno 4.5:1 tra testo e sfondo, verificato sia nel tema chiaro
+  sia in quello scuro.
+- **Navigazione da tastiera**: tutti gli elementi interattivi (link, pulsanti, ricerca,
+  cambio tema) sono raggiungibili e utilizzabili da tastiera, con indicatore di focus
+  visibile; un collegamento "Vai al contenuto" permette di saltare la navigazione ripetuta.
+- **Struttura**: gerarchia di intestazioni coerente (una sola per livello, senza salti),
+  lingua della pagina dichiarata (`lang="it"`), tabelle con intestazioni di colonna
+  associate alle celle.
+- **Non solo colore**: nelle tabelle disciplinari (Allegato B) il livello di gravità delle
+  infrazioni è sempre leggibile a parole, mai affidato al solo colore.
+- **Preferenze di sistema**: il sito rispetta l'impostazione "riduci il movimento"
+  (`prefers-reduced-motion`) e il tema chiaro/scuro del sistema operativo, con un
+  interruttore manuale sempre disponibile in navbar.
+- **Font di sistema**: nessun carattere caricato da servizi esterni (v. changelog, D34):
+  il testo usa i font già installati sul dispositivo di chi legge.
+
+## Limiti noti
+
+- Il **PDF** (formato Typst) e il **DOCX** non sono stati sottoposti a verifica di
+  accessibilità con la stessa cura del sito HTML: la versione di riferimento per
+  l'accessibilità è quella web.
+
+## Segnalazioni
+
+Eventuali difficoltà di accesso ai contenuti possono essere segnalate al Consiglio
+d'istituto, secondo le stesse modalità previste per le osservazioni su questa proposta di
+regolamento.

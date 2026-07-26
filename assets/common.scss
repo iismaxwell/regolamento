@@ -1,0 +1,528 @@
+/*-- scss:rules --*/
+
+// Font editoriali auto-ospitati (Cormorant Garamond + Lora, subset latin + latin-ext).
+// Serviti da assets/fonts/: nessuna richiesta a Google Fonts o altri CDN (GDPR).
+// I percorsi sono relativi al CSS compilato (site_libs/bootstrap/…) → assets/fonts/.
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/cormorant-garamond-v21-latin_latin-ext-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/cormorant-garamond-v21-latin_latin-ext-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/lora-v37-latin_latin-ext-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/lora-v37-latin_latin-ext-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/lora-v37-latin_latin-ext-italic.woff2") format("woff2");
+}
+
+// Regole condivise fra tema chiaro e scuro (D34 §3 + checklist accessibilità).
+
+// Skip-to-content: visibile solo al focus da tastiera.
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.5em 1em;
+  background: $body-bg;
+  color: $body-color;
+  border: 2px solid $primary;
+
+  &:focus {
+    left: 0.5em;
+    top: 0.5em;
+  }
+}
+
+// Focus visibile e coerente su tutti gli elementi interattivi.
+a:focus-visible,
+button:focus-visible,
+.copy-link-btn:focus-visible {
+  outline: 3px solid $primary;
+  outline-offset: 2px;
+}
+
+// Pulsante di copia-link per articolo (D34 §3): icona discreta accanto alla rubrica,
+// visibile al passaggio del mouse o al focus da tastiera.
+.copy-link-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $link-color;
+  opacity: 0;
+  margin-left: 0.4em;
+  padding: 0.1em 0.3em;
+  font-size: 0.75em;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+  }
+}
+
+h2:hover .copy-link-btn,
+h2:focus-within .copy-link-btn {
+  opacity: 1;
+}
+
+.copy-link-btn.copied::after {
+  content: "Link copiato";
+  margin-left: 0.4em;
+  font-size: 0.9em;
+}
+
+// Rispetto delle preferenze di riduzione del movimento.
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// ============================================================================
+// Redesign editoriale (specifica tipografica per Quarto, §§4-6)
+// Regole condivise fra chiaro e scuro: usano le variabili di tema
+// ($body-color, $primary, $link-color, $sidebar-bg) così i colori si adattano
+// da soli al tema attivo, invece di essere cablati come nella bozza della specifica.
+// ============================================================================
+
+// Navbar su superficie neutra, separata dal corpo da un filetto (hairline) anziché da un'ombra.
+.navbar {
+  border-bottom: 1px solid color-mix(in srgb, #{$body-color} 16%, transparent);
+  box-shadow: none;
+}
+
+// Marchio tolto dalla navbar (resta solo il titolo testuale): Quarto lo inietta in
+// automatico da _brand.yml, a prescindere da book.navbar.logo in _quarto.yml (stesso
+// meccanismo del marchio in sidebar, v. sotto) — l'unico modo per toglierlo qui è il
+// CSS, senza perdere il logo dal PDF (format.typst.logo) né dalla sidebar.
+.navbar .navbar-brand-logo { display: none; }
+
+// Corpo giustificato con sillabazione (misura di lettura editoriale).
+// Include i commi (li delle liste numerate degli articoli), non solo i p:
+// altrimenti la giustificazione dipende dal fatto che Pandoc avvolga o meno
+// ogni comma in un <p>, un dettaglio fragile e non intenzionale della resa
+// "loose"/"tight" delle liste numerate in Markdown.
+body { text-wrap: pretty; }
+.content p,
+.content ol > li {
+  text-align: justify;
+  hyphens: auto;
+}
+// Il blocco d'intestazione (chi ha redatto, data) non è prosa: giustificarlo
+// apriva buchi fra le parole in righe cortissime.
+.quarto-title-block p,
+.quarto-title-meta p,
+.quarto-title-meta-contents p {
+  text-align: left;
+  hyphens: manual;
+}
+
+// Numerazione di parti e articoli in cifre tabellari.
+h1, h2, h3 { font-variant-numeric: tabular-nums; }
+
+// Note a piè di pagina: nettamente più piccole del corpo, corsive, in tono smorzato,
+// separate da un hairline. Corregge il difetto delle note pari al corpo del testo.
+section.footnotes {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: color-mix(in srgb, #{$body-color} 65%, transparent);
+  border-top: 1px solid color-mix(in srgb, #{$body-color} 16%, transparent);
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+section.footnotes ol { padding-left: 1.2rem; }
+
+// Rimando a nota nel testo: numero apice in accento, tabellare.
+a.footnote-ref,
+.footnote-ref a {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: $link-color;
+}
+
+// Sidebar dell'indice (nav sinistra, id #quarto-sidebar): superficie smorzata,
+// separata dal testo da un filetto invece che dal solo stacco di colore.
+// NB: solo la nav sinistra, non il TOC destro che condivide la classe .sidebar.
+#quarto-sidebar {
+  background: $sidebar-bg;
+  border-right: 1px solid color-mix(in srgb, #{$body-color} 12%, transparent);
+}
+
+// Barra di scorrimento dell'indice sempre nascosta: con le barre di sistema
+// impostate su «sempre visibili» (macOS) si mangiava 16 px e tagliava in due la
+// colonna. L'indice resta scorrevole con rotella, trascinamento e tastiera.
+#quarto-sidebar,
+#quarto-margin-sidebar {
+  scrollbar-width: none;          // Firefox
+  -ms-overflow-style: none;       // Edge legacy
+
+  &::-webkit-scrollbar { width: 0; height: 0; }
+}
+
+// --- Testata dell'indice (specifica di design) ------------------------------
+// Quarto, avendo un logo in _brand.yml, lo stampa nella sidebar a tutta
+// larghezza: un marchio da 200 px sopra l'indice. Qui torna a essere il tondino
+// della specifica, con accanto il nome dell'istituto su due righe (il testo lo
+// aggiunge assets/copy-link.html: il markup di Quarto non lo prevede).
+#quarto-sidebar .sidebar-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.2rem 0 0.6rem;
+  text-decoration: none;
+  color: $body-color;
+}
+#quarto-sidebar .sidebar-logo {
+  width: 2.6rem;
+  height: 2.6rem;
+  max-height: none;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid color-mix(in srgb, #{$body-color} 15%, transparent);
+}
+#quarto-sidebar .sidebar-brand-text {
+  font-size: 0.8rem;
+  line-height: 1.25;
+  color: color-mix(in srgb, #{$body-color} 82%, transparent);
+}
+
+// Etichetta «Indice» sopra l'elenco delle parti: maiuscoletto spaziato d'accento.
+#quarto-sidebar .sidebar-menu-container::before {
+  content: "Indice";
+  display: block;
+  margin: 0.2rem 0 0.7rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+// Voci dell'indice: tono smorzato, così il filetto d'accento e la voce attiva
+// restano gli unici elementi in evidenza; e più aria fra una parte e l'altra,
+// che nella specifica è ciò che rende l'elenco leggibile a colpo d'occhio.
+#quarto-sidebar .sidebar-link {
+  color: color-mix(in srgb, #{$body-color} 78%, transparent);
+}
+#quarto-sidebar .sidebar-menu-container > ul > li.sidebar-item {
+  margin-bottom: 0.55rem;
+}
+#quarto-sidebar .sidebar-item-container { line-height: 1.3; }
+// Voce attiva marcata da un filetto d'accento a sinistra (il markup reale porta
+// "active" sull'ancora .sidebar-link, non su .sidebar-item).
+#quarto-sidebar .sidebar-link.active {
+  border-left: 2px solid $primary;
+  color: $link-color;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+// Numerazione romana delle parti, come nella specifica: la Premessa (prima
+// voce) e le Appendici (voce di sezione, con figli) restano senza numero, così
+// il conteggio corrisponde alle Parti I-XI del testo.
+#quarto-sidebar .sidebar-menu-container > ul { counter-reset: parte; }
+#quarto-sidebar .sidebar-menu-container > ul > li.sidebar-item:not(:first-child):not(.sidebar-item-section) {
+  counter-increment: parte;
+
+  > .sidebar-item-container > .sidebar-link .menu-text::before {
+    content: counter(parte, upper-roman) " · ";
+    color: color-mix(in srgb, #{$body-color} 55%, transparent);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+// Banner "proposta non vigente": da blocco pieno (.alert.alert-warning) a fascia
+// con soli filetti (hairline), testo centrato e corsivo. Selettore reale: id
+// #quarto-announcement, con specificità sufficiente a battere .alert-warning.
+// Lo sfondo resta opaco: il banner sta dentro #quarto-header, che è fixed-top,
+// quindi con fondo trasparente il testo della pagina scorreva visibile
+// attraverso la fascia (evidente su mobile, dove il banner occupa tre righe).
+// La superficie è la stessa della navbar ($sidebar-bg), non quella della pagina:
+// così l'intestazione è un blocco unico e il rapporto fra le due fasce non si
+// rovescia passando da chiaro a scuro (con $body-bg il banner risultava più
+// chiaro della navbar in tema chiaro e più scuro in tema scuro).
+#quarto-announcement.alert {
+  background: $sidebar-bg;
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, #{$body-color} 16%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, #{$body-color} 16%, transparent);
+  border-radius: 0;
+  color: $body-color;
+}
+#quarto-announcement .quarto-announcement-content {
+  font-style: italic;
+  text-align: center;
+}
+
+// Icone Phosphor duotone (v. assets/genera-icone.py): stanno nel testo come
+// stavano le Bootstrap Icons, quadrate e allineate alla riga di base.
+.icona {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  > svg {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.15em;
+  }
+}
+// Nella barra dei comandi le icone sono il comando: un filo più grandi.
+.quarto-navbar-tools .icona > svg,
+.quarto-secondary-nav .quarto-btn-toggle .icona > svg,
+#quarto-search .icona > svg {
+  width: 1.35em;
+  height: 1.35em;
+}
+// L'icona dell'avviso segue il corpo dell'avviso, che sul telefono rimpicciolisce.
+#quarto-announcement .icona > svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+// Il triangolino del menu «Scarica» è l'unico segno rimasto del corredo di
+// Bootstrap: via anche quello, l'icona di download dice già che c'è un menu.
+.quarto-navbar-tools .dropdown-toggle::after { display: none; }
+
+// Barra del capitolo corrente: la briciola di pane eredita dalla base scura un
+// riquadro grigio che in chiaro non c'è. Superficie unica in entrambi i temi.
+.quarto-secondary-nav .breadcrumb { background: transparent; }
+
+// Stato del documento in alto a destra («Proposta · v0.0.0 (bozza)»): non un
+// pulsante ma un'etichetta in maiuscoletto spaziato d'accento, come nella
+// specifica di design. L'orologio resta nel markup perché su schermo stretto,
+// dove il testo non ci sta, è quello a rappresentare la voce.
+.navbar .navbar-nav .nav-link {
+  color: $primary;
+
+  .menu-text {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem;
+  }
+}
+@media (min-width: 992px) {
+  // .icona è il segnaposto delle icone Phosphor, che a pagina caricata prendono
+  // il posto degli <i class="bi ..."> di Quarto: la regola vale per entrambi,
+  // perché lo scambio avviene dopo l'applicazione del foglio di stile.
+  .navbar .navbar-nav .nav-link > .bi,
+  .navbar .navbar-nav .nav-link > .icona { display: none; }
+
+  // Marchio e comandi allineati alla colonna dell'indice invece che al bordo
+  // della finestra: la misura arriva da assets/copy-link.html, che legge la
+  // griglia reale del contenuto (--navbar-align); 1em è il valore di Quarto,
+  // usato finché lo script non ha misurato.
+  #quarto-header > nav.navbar { padding-inline: 0; }
+  .navbar > .navbar-container {
+    padding-left: var(--navbar-align, 1em);
+    padding-right: var(--navbar-align, 1em);
+  }
+}
+
+// Le due formulazioni dell'avviso di stato (v. `website.announcement` in _quarto.yml):
+// quella distesa sopra i 768 px, quella breve sotto. Sul telefono la formulazione
+// distesa occupava tre righe di intestazione fissa, sempre presenti.
+.ann-breve { display: none; }
+
+// ============================================================================
+// Intestazione su schermo stretto (< 992 px: sotto la soglia a cui la navbar
+// di Bootstrap collassa). Nel layout di serie l'intestazione fissa arrivava a
+// 257 px su un telefono da 390 px — quasi un terzo dello schermo — perché
+// avviso, navbar e barra di capitolo andavano tutti a capo su due righe
+// ciascuno. Qui si riporta il tutto a: una riga di navbar, una riga di
+// capitolo, un avviso breve.
+// ============================================================================
+@media (max-width: 991.98px) {
+
+  // --- Riga 1: marchio a sinistra, strumenti a destra, tutto in linea ------
+  // Il contenitore resta a capo consentito (wrap) solo per la tendina del
+  // menu, che deve poter scendere sotto quando la si apre: tutti gli altri
+  // elementi sono a larghezza fissa e ci stanno su una riga sola.
+  // I margini laterali del tema (navbar + container annidati) da soli si
+  // mangiavano una cinquantina di pixel dei 390 disponibili: sul telefono
+  // quello spazio serve al titolo. Il selettore ricalca quello di Quarto
+  // (`#quarto-header > nav`, che vale 1em per lato): con la sola classe
+  // .navbar la regola perderebbe per specificità.
+  // Il padding verticale va fissato qui perché le due basi di tema (litera e
+  // darkly) ne usano due diversi: senza questa riga la barra è più alta di
+  // 17 px in scuro che in chiaro.
+  #quarto-header > nav.navbar {
+    padding-inline: 0.35rem;
+    padding-block: 0.2rem;
+  }
+  .navbar > .navbar-container {
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 0.15rem;
+    padding-inline: 0.35rem;
+  }
+
+  // Ordine visivo indipendente dall'ordine nel markup di Quarto.
+  .navbar .navbar-brand-container { order: 1; }
+  .navbar .navbar-collapse        { order: 2; }
+  .navbar .quarto-navbar-tools    { order: 3; }
+  .navbar #quarto-search          { order: 4; }
+  .navbar .navbar-toggler         { order: 5; }
+
+  // Il marchio occupa lo spazio che avanza; "mx-auto" di Bootstrap arriva con
+  // !important, quindi va battuto con la stessa arma.
+  .navbar .navbar-brand-container.mx-auto {
+    margin-inline: 0 !important;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .navbar .navbar-brand { padding-block: 0; }
+  // Il titolo del sito si tronca con i puntini solo se davvero non ci sta.
+  .navbar .navbar-title {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  // L'unica voce di menu (il badge di versione) resta sempre visibile come
+  // sola icona accanto agli altri strumenti, invece di stare nascosta dietro
+  // un pulsante hamburger che apriva una tendina con dentro una riga sola.
+  // Se un giorno la navbar avrà più voci, questo blocco va ripensato.
+  .navbar .navbar-collapse.collapse:not(.show) {
+    display: flex !important;
+    flex: 0 0 auto;
+  }
+  .navbar .navbar-collapse .navbar-nav { flex-direction: row; }
+  .navbar .navbar-collapse .nav-link {
+    padding-inline: 0.25rem;
+    .menu-text { display: none; }
+  }
+  .navbar .navbar-toggler { display: none; }
+
+  .navbar .quarto-navbar-tools {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .navbar .quarto-navigation-tool { padding-inline: 0.25rem !important; }
+
+  // Bersagli di tocco: 40 px di lato — sopra i 24 px richiesti dalle WCAG 2.5.8
+  // (AA) e vicini ai 44 raccomandati, che qui ruberebbero al titolo lo spazio
+  // che gli serve per stare intero.
+  .navbar .nav-link,
+  .navbar .quarto-navigation-tool,
+  .navbar #quarto-search .aa-DetachedSearchButton,
+  .quarto-secondary-nav .quarto-btn-toggle {
+    min-width: 2.4rem;
+    min-height: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // --- Indice a comparsa ---------------------------------------------------
+  // Difetto del tema, non del redesign (verificato disattivando queste regole):
+  // aperto da telefono, il pannello dell'indice si dimensionava sul contenuto e
+  // arrivava a 521 px su uno schermo da 390, mandando fuori vista la coda di
+  // ogni voce. Qui gli si dà una larghezza da cassetto, con un margine di
+  // pagina visibile a destra che invita a richiuderlo.
+  #quarto-sidebar.collapse-horizontal.show,
+  #quarto-sidebar.collapse-horizontal.collapsing {
+    width: min(88vw, 22rem) !important;
+    overflow-x: hidden;
+  }
+  // Il tondino del marchio è nascosto dal tema sotto i 992 px (classi `d-none
+  // d-lg-inline` di Bootstrap): ora che è piccolo può stare anche in cima al
+  // cassetto, accanto al nome dell'istituto. Si mostra solo quello del tema in
+  // uso — l'altro resta nascosto dalle regole `.light-content`/`.dark-content`.
+  body.quarto-light #quarto-sidebar .sidebar-logo.light-content,
+  body.quarto-dark #quarto-sidebar .sidebar-logo.dark-content {
+    display: inline-block !important;
+  }
+
+  // Causa prima del difetto: sotto i 992 px il tema vieta l'andata a capo nelle
+  // voci dell'indice, così il pannello si allargava fino alla voce più lunga.
+  // I titoli delle parti sono lunghi: qui vanno a capo, come già fanno su
+  // schermo largo.
+  #quarto-sidebar .sidebar-menu-container { white-space: normal; }
+
+  // --- Riga 2: capitolo corrente, su una riga sola -------------------------
+  // La barra apre l'indice generale: il titolo lungo del capitolo la mandava
+  // a due righe. Ora si tronca con i puntini.
+  .quarto-secondary-nav .container-fluid {
+    align-items: center;
+    padding-inline: 0.35rem;
+    min-height: 0;
+  }
+  .quarto-secondary-nav .quarto-btn-toggle { padding: 0; }
+  // Le tre catene di contenimento (nav → ol → li) devono tutte poter rimpicciolire
+  // e tagliare, altrimenti il titolo lungo sfonda la barra invece di troncarsi.
+  .quarto-secondary-nav .quarto-page-breadcrumbs {
+    min-width: 0;
+    flex: 0 1 auto;
+    overflow: hidden;
+  }
+  .quarto-secondary-nav .breadcrumb {
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  .quarto-secondary-nav .breadcrumb-item {
+    min-width: 0;
+    overflow: hidden;
+    font-size: 0.9rem;
+  }
+  .quarto-secondary-nav .breadcrumb-item a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Sul telefono vero e proprio (< 576 px) lo spazio non basta per il titolo del
+// sito e quattro comandi: cade il badge di versione, che come sola icona non
+// dice comunque nulla. Il changelog resta raggiungibile dall'indice (dove
+// compare fra le appendici) e dal piede di pagina.
+@media (max-width: 575.98px) {
+  .navbar .navbar-collapse.collapse:not(.show) { display: none !important; }
+}
+
+// --- Avviso di stato: forma breve sotto i 768 px ---------------------------
+@media (max-width: 767.98px) {
+  .ann-lunga { display: none; }
+  .ann-breve { display: inline; }
+
+  #quarto-announcement {
+    padding: 0.35em 0.7em;
+    font-size: 0.82em;
+  }
+  #quarto-announcement .quarto-announcement-icon {
+    font-size: 1em;
+    margin-top: 0;
+  }
+}

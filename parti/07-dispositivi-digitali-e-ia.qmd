@@ -1,0 +1,35 @@
+# Dispositivi digitali e intelligenza artificiale {.unnumbered .unlisted}
+
+## Art. 33 — Principi d’uso delle tecnologie a scuola {#art-33 .unnumbered}
+
+1. L’Istituto promuove un uso consapevole, critico e responsabile delle tecnologie digitali, come strumento di apprendimento e di cittadinanza e non solo come oggetto di divieto.
+2. L’educazione all’uso responsabile dei dispositivi e della rete è parte del curricolo di educazione civica e di cittadinanza digitale dell’Istituto, con cui il presente regolamento si coordina.
+3. Ai fini del presente regolamento sono dispositivi personali gli apparecchi elettronici di proprietà dello studente o comunque in suo uso individuale, tra cui lo smartphone, il telefono cellulare, gli smartwatch e gli altri dispositivi indossabili, i tablet e i computer personali non forniti dalla scuola.
+4. I dispositivi forniti dalla scuola e le dotazioni dei laboratori si usano secondo le modalità stabilite dai docenti e dai regolamenti di laboratorio richiamati all’art. 45.
+
+## Art. 34 — Divieto di uso dello smartphone e dei dispositivi personali {#art-34 .unnumbered}
+
+1. È vietato l’utilizzo dello smartphone e del telefono cellulare per l’intero orario scolastico, anche a fini didattici, salvo le eccezioni dell’art. 35 (nota del Ministero dell’istruzione e del merito prot. n. 3392 del 16 giugno 2025).
+2. Il divieto si estende agli smartwatch e agli altri dispositivi indossabili con funzioni di comunicazione, e vale in tutti i locali dell’istituto e nelle aree di pertinenza, per l’intera permanenza a scuola, comprese le attività fuori sede e le uscite didattiche.
+3. Durante l’orario scolastico i dispositivi personali sono tenuti spenti o in modalità aerea e riposti negli zaini o negli effetti personali dello studente.
+4. Gli altri dispositivi digitali di uso didattico, quali personal computer, tablet e lavagne interattive, sono ammessi esclusivamente per finalità didattiche e secondo le modalità programmate dai docenti (nota MIM prot. n. 3392 del 16 giugno 2025).
+5. L’Istituto non risponde dello smarrimento, del danneggiamento o della sottrazione dei dispositivi personali introdotti a scuola dallo studente.
+6. Le sanzioni per la violazione del divieto sono stabilite dalla tabella B.2 dell’Allegato B.
+
+## Art. 35 — Eccezioni al divieto {#art-35 .unnumbered}
+
+1. In deroga all’art. 34, l’uso dei dispositivi personali è consentito nei soli casi seguenti (nota MIM prot. n. 3392 del 16 giugno 2025):
+   a. quando è previsto dal piano educativo individualizzato o dal piano didattico personalizzato per gli studenti con disabilità o con disturbi specifici dell’apprendimento;
+   b. per motivate necessità personali, quali esigenze di salute documentate;
+   c. quando l’uso è strettamente funzionale all’efficace svolgimento dell’attività didattica negli indirizzi del settore tecnologico dedicati all’informatica e alle telecomunicazioni, entrambi presenti nell’Istituto.
+2. L’eccezione di cui al comma 1, lettera c), non costituisce deroga generale al divieto: opera soltanto quando l’uso è previsto dal progetto formativo e autorizzato dal docente per la specifica attività, e resta vietato ogni uso non funzionale alla didattica.
+3. Le misure organizzative per assicurare il rispetto del divieto non possono tradursi in perquisizioni personali dello studente o dei suoi effetti (art. 13 della Costituzione).
+4. Il ritiro del dispositivo, ove previsto dalla tabella B.2 dell’Allegato B, è disposto solo a titolo temporaneo, limitato all’orario delle lezioni, con eventuale riconsegna alla famiglia nei casi di reiterazione; non può avere durata indeterminata (art. 4, comma 5, decreto del Presidente della Repubblica 24 giugno 1998, n. 249, di seguito «Statuto»).
+
+## Art. 36 — Intelligenza artificiale {#art-36 .unnumbered}
+
+1. L’uso di sistemi e strumenti di intelligenza artificiale nelle attività didattiche e gestionali dell’Istituto è disciplinato dall’Allegato C, che costituisce parte integrante del presente regolamento.
+2. Il dirigente scolastico ha la responsabilità primaria della governance dei sistemi di intelligenza artificiale adottati dall’Istituto (decreto ministeriale 9 agosto 2025, n. 166, § 3.1).
+3. L’introduzione di un sistema di intelligenza artificiale che comporti trattamento di dati personali è subordinata agli adempimenti in materia di protezione dei dati richiamati dall’Allegato C, che restano di competenza del dirigente scolastico e del responsabile della protezione dei dati.
+4. Gli usi consentiti e vietati dell’intelligenza artificiale, gli obblighi di dichiarazione dei materiali prodotti con il suo ausilio e le regole di supervisione umana sono stabiliti dall’Allegato C.
+5. La violazione delle regole d’uso dell’intelligenza artificiale è valutata sul piano disciplinare ai sensi della Parte VI e della tabella B.1 dell’Allegato B.

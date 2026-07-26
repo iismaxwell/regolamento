@@ -1,0 +1,43 @@
+# Tabelle delle infrazioni e delle sanzioni {.unnumbered .unlisted}
+
+Questo allegato costituisce parte integrante del regolamento. Le tabelle sono richiamate dalla Parte VI (disciplina) e dalla Parte VII (dispositivi digitali). Gli esempi di mancanza hanno valore esemplificativo e non esauriscono le condotte sanzionabili ai sensi degli artt. 23–26.
+
+## Tabella B.1 — Infrazioni, livelli di gravità e sanzioni {.unnumbered}
+
+I comportamenti indicati rilevano anche quando sono tenuti per via informatica o telematica (siti web, social network, servizi di messaggistica). La reiterazione di una mancanza comporta l’applicazione della sanzione del livello immediatamente superiore (art. 26, comma 2).
+
+| Livello | Tipologia ed esempi di mancanza | Sanzione | Organo competente |
+|---|---|---|---|
+| 1 — lieve | Ritardi e inadempienze occasionali, disturbo lieve dell’attività didattica, scarsa partecipazione, negligenza nei doveri scolastici. | Richiamo verbale | Docente o dirigente scolastico |
+| 2 — meno grave | Turpiloquio, comportamento irrispettoso, assenze ingiustificate ripetute, trasgressioni lievi al regolamento, mancata cura dell’ordine e della pulizia dell’aula, offese o derisioni verso i compagni anche per via informatica. | Ammonizione scritta sul registro elettronico, con informazione alla famiglia | Docente o dirigente scolastico |
+| 3 — grave | Mancanze reiterate dopo l’ammonizione; comportamento gravemente irrispettoso; danneggiamento colposo dei beni della scuola; abbandono non autorizzato dei locali; diffusione non autorizzata di immagini o registrazioni; atti di bullismo o cyberbullismo di lieve entità (art. 41). | Allontanamento dalle lezioni fino a 2 giorni, con attività di approfondimento (art. 27, comma 2) | Consiglio di classe |
+| 4 — molto grave | Ingiurie, minacce, diffamazione anche per via informatica; danni dolosi; atti di bullismo o cyberbullismo; sottrazione di beni; condotte che mettono a rischio la sicurezza altrui. | Allontanamento dalle lezioni da 3 a 15 giorni, con attività di cittadinanza attiva e solidale (artt. 27, comma 3, e 29) | Consiglio di classe |
+| 5 — gravissima | Reati che violano la dignità e il rispetto della persona; pericolo per l’incolumità delle persone; atti violenti o di aggressione verso il personale o gli studenti; recidiva o particolare gravità con elevato allarme sociale. | Allontanamento dalla comunità scolastica per più di 15 giorni; nei casi di cui all’art. 27, comma 5, esclusione dallo scrutinio finale o non ammissione all’esame di Stato | Consiglio d’istituto |
+
+I danni ai beni, ai servizi o alle strutture dell’Istituto sono sanzionati anche con il risarcimento economico, indipendentemente dalla sanzione disciplinare applicata.
+
+## Tabella B.2 — Sanzioni per l’uso dei dispositivi personali {.unnumbered}
+
+La tabella dà attuazione al divieto di utilizzo dello smartphone e dei dispositivi personali stabilito dall’art. 34 e alle relative eccezioni (art. 35). Il ritiro del dispositivo, ove previsto, è temporaneo e limitato all’orario delle lezioni; non sono ammesse perquisizioni personali o degli effetti dello studente (art. 35).
+
+| Condotta | Frequenza | Sanzione | Organo competente |
+|---|---|---|---|
+| Il dispositivo è riposto ma non spento né in modalità aerea | Prima volta | Richiamo verbale | Docente |
+| Il dispositivo è riposto ma non spento né in modalità aerea | Reiterata | Ammonizione scritta sul registro elettronico | Docente |
+| Lo studente tiene o usa il dispositivo durante le lezioni | Prima volta | Ammonizione scritta sul registro elettronico | Docente |
+| Lo studente tiene o usa il dispositivo durante le lezioni | Reiterata | Allontanamento dalle lezioni fino a 2 giorni, con elaborato sull’uso consapevole dei dispositivi | Consiglio di classe |
+| Lo studente usa il dispositivo durante una verifica scritta | — | Ritiro e valutazione insufficiente della verifica, e allontanamento dalle lezioni fino a 2 giorni | Docente e Consiglio di classe |
+| Lo studente usa il dispositivo per acquisire o diffondere dati personali (immagini, suoni, filmati) | — | Allontanamento dalle lezioni fino a 2 giorni, con eventuale segnalazione all’autorità competente; nei casi gravi si applica la tabella B.1 | Consiglio di classe |
+
+## Tabella B.3 — Aree di attività di cittadinanza attiva e solidale in istituto {.unnumbered}
+
+Attività svolgibili a favore della comunità scolastica quando manchino strutture ospitanti esterne (art. 29, comma 4). Le attività sono commisurate all’età e alle capacità dello studente, si svolgono sotto la supervisione del personale e non sostituiscono le mansioni del personale ausiliario, tecnico e amministrativo.
+
+| Area | Attività | Limiti e condizioni |
+|---|---|---|
+| Cura degli spazi comuni | Riordino di biblioteca, laboratori, aule e spazi comuni; cura di piccoli spazi verdi. | Attività leggere; escluse mansioni pesanti, pericolose o di pulizia riservate al personale. |
+| Supporto educativo e didattico | Collaborazione a progetti di educazione civica; supporto in biblioteca e nei laboratori; preparazione di materiali. | Sotto la guida di un docente; nessun accesso a dati personali. |
+| Vita scolastica e cittadinanza | Realizzazione di materiali per campagne interne (legalità, ambiente, contrasto al bullismo); supporto a eventi e giornate tematiche. | Contenuti approvati da un docente; nessun ruolo di responsabilità. |
+| Supporto organizzativo | Archiviazione e digitalizzazione di materiale non riservato; supporto alla distribuzione delle comunicazioni. | Esclusi i documenti contenenti dati personali o riservati. |
+| Educazione ambientale | Promozione della raccolta differenziata; progetti di sostenibilità; monitoraggio dei consumi. | Attività non tecniche; ruolo educativo e consultivo. |
+| Attività educative e di riflessione | Riflessione guidata sui comportamenti tenuti, con analisi delle conseguenze e redazione di brevi elaborati; studio assistito; letture guidate e discussione con un docente. | Presenza costante di un docente; nessuna trattazione di situazioni personali sensibili di natura sanitaria o psicologica. |

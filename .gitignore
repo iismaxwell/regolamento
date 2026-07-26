@@ -1,0 +1,7 @@
+.DS_Store
+/_book/
+/.quarto/
+/assets/reference.docx.tmp
+*.log
+
+**/*.quarto_ipynb

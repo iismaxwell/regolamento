@@ -1,0 +1,107 @@
+# Configurazione Quarto — toolchain completa allestita in F7 (2026-07-24).
+# Struttura di parti e allegati confermata in F4: 11 parti (Art. 1-50) + 4 allegati
+# + 3 pagine di servizio (riferimenti normativi, accessibilità, changelog).
+
+project:
+  type: book
+  output-dir: _book
+
+lang: it
+
+# Etichette del blocco d'intestazione: quelle di serie ("Autore/Autrice", "Data
+# di pubblicazione") non descrivono un atto collegiale aggiornato di continuo.
+language:
+  title-block-author-single: "Redatto da"
+  title-block-author-plural: "Redatto da"
+  title-block-published: "Aggiornato al"
+  # Il menu dei formati scaricabili resta altrimenti in inglese ("Download PDF").
+  tools-download: "Scarica"
+
+website:
+  announcement:
+    # Due formulazioni dello stesso avviso: la distesa sopra i 768 px, la breve
+    # sotto (sul telefono l'avviso disteso occupava tre righe di intestazione
+    # fissa). Lo scambio è in assets/common.scss, classi .ann-lunga / .ann-breve.
+    content: "[Questa è una **proposta** di regolamento d'istituto, non il testo vigente: diventerà regolamento solo con la delibera del Consiglio d'istituto.]{.ann-lunga}[**Proposta** non ancora in vigore.]{.ann-breve}"
+    type: warning
+    icon: exclamation-triangle
+    dismissable: false
+    position: above-navbar
+
+book:
+  title: "Regolamento d'istituto"
+  subtitle: "IIS J.C. Maxwell — Nichelino · versione 0.0.0 (bozza)"
+  # niente apostrofi/trattini: il campo author del template typst (orange-book)
+  # non applica la tipografia intelligente e mostra i caratteri as-is (v. README/CLAUDE.md)
+  author: "Consiglio di istituto, IIS J.C. Maxwell, Nichelino"
+  # la versione qui sopra si aggiorna a ogni bump insieme a CHANGELOG.md,
+  # al badge di navbar e al footer (v. CLAUDE.md § versione)
+  date: last-modified
+  search: true
+  output-file: regolamento-maxwell
+
+  navbar:
+    title: "Regolamento d'istituto"
+    search: true
+    right:
+      - text: "Proposta · v0.0.0 (bozza)"
+        icon: clock-history
+        href: pagine/changelog.html
+        aria-label: "Versione e changelog"
+
+  downloads: [pdf, docx]
+
+  page-footer:
+    left: "IIS J.C. Maxwell — Nichelino (TO)"
+    center: "Versione **0.0.0 (bozza)** · [Changelog](pagine/changelog.html)"
+    right: "[PDF](regolamento-maxwell.pdf) · [DOCX](regolamento-maxwell.docx) · CC BY 4.0 (proposta) · [Dichiarazione di accessibilità](pagine/dichiarazione-accessibilita.html)"
+
+  chapters:
+    - index.qmd
+    - parti/01-principi-e-definizioni.qmd
+    - parti/02-organi-collegiali.qmd
+    - parti/03-partecipazione-e-assemblee.qmd
+    - parti/04-funzionamento.qmd
+    - parti/05-diritti-e-doveri.qmd
+    - parti/06-disciplina.qmd
+    - parti/07-dispositivi-digitali-e-ia.qmd
+    - parti/08-inclusione-e-benessere.qmd
+    - parti/09-viaggi-uscite-fsl.qmd
+    - parti/10-laboratori-e-sicurezza.qmd
+    - parti/11-disposizioni-finali.qmd
+  appendices:
+    - allegati/a-patto-di-corresponsabilita.qmd
+    - allegati/b-tabelle-disciplinari.qmd
+    - allegati/c-disciplina-uso-ia.qmd
+    - allegati/d-glossario.qmd
+    - pagine/riferimenti-normativi.qmd
+    - pagine/dichiarazione-accessibilita.qmd
+    - pagine/changelog.qmd
+
+format:
+  html:
+    theme:
+      # Basi "piatte" gemelle (litera chiaro / darkly scuro): stessa struttura grafica,
+      # cambiano solo i colori fra i due temi. (Prima il dark usava "slate", che introduce
+      # gradienti e cornici proprie e spostamenti di layout nella navbar.)
+      light: [litera, assets/theme-light.scss, assets/common.scss]
+      dark: [darkly, assets/theme-dark.scss, assets/common.scss]
+    # Font editoriali auto-ospitati (Cormorant Garamond + Lora): dichiarati via @font-face
+    # in assets/common.scss, serviti da assets/fonts/. Nessuna richiesta a CDN esterni.
+    toc: true
+    number-sections: true
+    include-before-body: [assets/skip-link.html]
+    # icone.html deve precedere copy-link.html: espone window.iconaMaxwell, che
+    # il secondo usa per il pulsante di copia-link.
+    include-after-body: [assets/icone.html, assets/copy-link.html]
+  typst:
+    logo: assets/logo.png
+    # Coerenza col corpo HTML (specifica §7): Lora non è installato per Typst; PT Serif è
+    # il serif umanista installato più vicino. I titoli restano quelli del template orange-book.
+    mainfont: "PT Serif"
+    toc: true
+    number-sections: true
+  docx:
+    reference-doc: assets/reference.docx
+    toc: true
+    number-sections: true

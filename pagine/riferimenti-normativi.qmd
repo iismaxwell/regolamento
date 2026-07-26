@@ -1,0 +1,66 @@
+# Riferimenti normativi {.unnumbered}
+
+Elenco delle fonti normative citate nel regolamento, con link al testo vigente su
+[Normattiva](https://www.normattiva.it) o, per il diritto dell'Unione europea, su
+[EUR-Lex](https://eur-lex.europa.eu). Gli estremi sono quelli verificati sulle fonti
+primarie in fase di redazione (v. changelog).
+
+## Costituzione e codice civile
+
+| Fonte | Oggetto |
+|---|---|
+| [Costituzione della Repubblica italiana, art. 13](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione) | Libertà personale, richiamata in Allegato C (protezione dei dati) |
+| [Codice civile, artt. 147 e 2048](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262) | Responsabilità civile dei genitori, richiamata in Allegato A |
+
+## Statuto delle studentesse e degli studenti, disciplina e valutazione
+
+| Fonte | Oggetto |
+|---|---|
+| [Decreto del Presidente della Repubblica 24 giugno 1998, n. 249](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:1998-06-24;249) | Statuto delle studentesse e degli studenti |
+| [Decreto del Presidente della Repubblica 21 novembre 2007, n. 235](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2007-11-21;235) | Prima modifica dello Statuto (organo di garanzia, patto di corresponsabilità) |
+| [Decreto del Presidente della Repubblica 8 agosto 2025, n. 134](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2025-08-08;134) | Riforma 2025 dello Statuto: sistema disciplinare e patto di corresponsabilità |
+| [Decreto del Presidente della Repubblica 22 giugno 2009, n. 122](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2009-06-22;122) | Regolamento sulla valutazione degli studenti |
+| [Decreto del Presidente della Repubblica 8 agosto 2025, n. 135](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2025-08-08;135) | Riforma 2025 della valutazione del comportamento |
+| Decreto ministeriale 16 gennaio 2009, n. 5 | Soglie storiche del voto di comportamento (non reperibile su Normattiva: atto amministrativo del Ministero) |
+
+## Ordinamento, organi collegiali e assemblee
+
+| Fonte | Oggetto |
+|---|---|
+| [Decreto legislativo 16 aprile 1994, n. 297](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1994-04-16;297) | Testo unico dell'istruzione: potestà regolamentare, organi collegiali, assemblee |
+
+## Dispositivi digitali e intelligenza artificiale
+
+| Fonte | Oggetto |
+|---|---|
+| [Legge 23 settembre 2025, n. 132](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-09-23;132) | Principi e deleghe in materia di intelligenza artificiale |
+| Decreto ministeriale 9 agosto 2025, n. 166 | Prime linee guida sull'intelligenza artificiale a scuola (non reperibile su Normattiva: atto amministrativo del Ministero) |
+| [Regolamento (UE) 2024/1689](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32024R1689) | Regolamento europeo sull'intelligenza artificiale (AI Act) |
+| [Regolamento (UE) 2016/679](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32016R0679) | Regolamento generale sulla protezione dei dati (GDPR) |
+
+## Inclusione, bullismo e cyberbullismo
+
+| Fonte | Oggetto |
+|---|---|
+| [Legge 5 febbraio 1992, n. 104](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-05;104) | Legge-quadro per l'assistenza e i diritti delle persone con disabilità |
+| [Decreto legislativo 13 aprile 2017, n. 66](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2017-04-13;66) | Norme per la promozione dell'inclusione scolastica degli studenti con disabilità |
+| [Legge 8 ottobre 2010, n. 170](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2010-10-08;170) | Nuove norme sui disturbi specifici di apprendimento (DSA) |
+| [Legge 29 maggio 2017, n. 71](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2017-05-29;71) | Disposizioni a tutela dei minori contro bullismo e cyberbullismo |
+| [Legge 17 maggio 2024, n. 70](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2024-05-17;70) | Modifiche alla legge 71/2017 su prevenzione e contrasto del bullismo |
+
+## Viaggi, formazione scuola-lavoro e mobilità
+
+| Fonte | Oggetto |
+|---|---|
+| [Decreto-legge 9 settembre 2025, n. 127](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2025-09-09;127) | Ridenominazione PCTO in formazione scuola-lavoro |
+| [Legge 30 ottobre 2025, n. 164](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-10-30;164) | Legge di conversione del decreto-legge 127/2025 |
+
+## Sicurezza, laboratori e salute
+
+| Fonte | Oggetto |
+|---|---|
+| [Decreto legislativo 9 aprile 2008, n. 81](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81) | Testo unico sulla salute e sicurezza nei luoghi di lavoro |
+| [Legge 16 gennaio 2003, n. 3](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2003-01-16;3) | Divieto di fumo nei locali chiusi (art. 51) |
+| [Decreto-legge 12 settembre 2013, n. 104](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2013-09-12;104) | Estensione del divieto di fumo alle sigarette elettroniche e alle aree all'aperto |
+| [Legge 8 novembre 2013, n. 128](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2013-11-08;128) | Legge di conversione del decreto-legge 104/2013 |
+| [Legge 11 novembre 1975, n. 584](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1975-11-11;584) | Divieto di fumare in determinati locali e sanzioni amministrative |

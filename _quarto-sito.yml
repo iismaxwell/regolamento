@@ -1,0 +1,29 @@
+# Profilo "sito" (predefinito): il libro in HTML, quello pubblicato su GitHub Pages.
+#   quarto render      quarto preview
+#
+# Quarto fonde gli elenchi del profilo con quelli di _quarto.yml accodandoli:
+# le due pagine qui sotto compaiono quindi in fondo agli allegati, dopo i
+# riferimenti normativi. Nel profilo "stampa" non ci sono, e PDF e DOCX non le
+# riportano né nel corpo né nell'indice.
+
+book:
+  appendices:
+    - pagine/dichiarazione-accessibilita.qmd
+    - pagine/changelog.qmd
+
+format:
+  html:
+    theme:
+      # Basi "piatte" gemelle (litera chiaro / darkly scuro): stessa struttura grafica,
+      # cambiano solo i colori fra i due temi. (Prima il dark usava "slate", che introduce
+      # gradienti e cornici proprie e spostamenti di layout nella navbar.)
+      light: [litera, assets/theme-light.scss, assets/common.scss]
+      dark: [darkly, assets/theme-dark.scss, assets/common.scss]
+    # Font editoriali auto-ospitati (Cormorant Garamond + Lora): dichiarati via @font-face
+    # in assets/common.scss, serviti da assets/fonts/. Nessuna richiesta a CDN esterni.
+    toc: true
+    number-sections: true
+    include-before-body: [assets/skip-link.html]
+    # icone.html deve precedere copy-link.html: espone window.iconaMaxwell, che
+    # il secondo usa per il pulsante di copia-link.
+    include-after-body: [assets/icone.html, assets/copy-link.html]

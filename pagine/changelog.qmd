@@ -4,11 +4,4 @@ number-sections: false
 
 # Changelog {.unnumbered}
 
-::: {.content-visible when-format="html"}
 {{< include ../CHANGELOG.md >}}
-:::
-
-::: {.content-visible unless-format="html"}
-La cronologia delle versioni non è riportata in questo formato: è consultabile nella pagina
-*Changelog* del sito pubblicato.
-:::

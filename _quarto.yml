@@ -1,10 +1,22 @@
 # Configurazione Quarto — toolchain completa allestita in F7 (2026-07-24).
 # Struttura di parti e allegati confermata in F4: 11 parti (Art. 1-50) + 4 allegati
 # + 3 pagine di servizio (riferimenti normativi, accessibilità, changelog).
+#
+# Questo file contiene solo ciò che è comune ai due profili di render; i formati
+# stanno nei profili (v. _quarto-sito.yml e _quarto-stampa.yml e README § Come si genera):
+#   sito    (predefinito) — HTML, con dichiarazione di accessibilità e changelog
+#   stampa                — PDF e DOCX, senza quelle due pagine
+# Sono pagine che descrivono il sito, non il regolamento: nel documento scaricato
+# non hanno senso. In un libro Quarto un capitolo non si può escludere per formato
+# (la conditional content svuota il corpo ma lascia titolo e voce nell'indice):
+# l'unico modo è tenerli fuori dall'elenco dei capitoli, ed è quello che fa il profilo.
 
 project:
   type: book
   output-dir: _book
+
+profile:
+  default: sito
 
 lang: it
 
@@ -75,33 +87,5 @@ book:
     - allegati/c-disciplina-uso-ia.qmd
     - allegati/d-glossario.qmd
     - pagine/riferimenti-normativi.qmd
-    - pagine/dichiarazione-accessibilita.qmd
-    - pagine/changelog.qmd
-
-format:
-  html:
-    theme:
-      # Basi "piatte" gemelle (litera chiaro / darkly scuro): stessa struttura grafica,
-      # cambiano solo i colori fra i due temi. (Prima il dark usava "slate", che introduce
-      # gradienti e cornici proprie e spostamenti di layout nella navbar.)
-      light: [litera, assets/theme-light.scss, assets/common.scss]
-      dark: [darkly, assets/theme-dark.scss, assets/common.scss]
-    # Font editoriali auto-ospitati (Cormorant Garamond + Lora): dichiarati via @font-face
-    # in assets/common.scss, serviti da assets/fonts/. Nessuna richiesta a CDN esterni.
-    toc: true
-    number-sections: true
-    include-before-body: [assets/skip-link.html]
-    # icone.html deve precedere copy-link.html: espone window.iconaMaxwell, che
-    # il secondo usa per il pulsante di copia-link.
-    include-after-body: [assets/icone.html, assets/copy-link.html]
-  typst:
-    logo: assets/logo.png
-    # Coerenza col corpo HTML (specifica §7): Lora non è installato per Typst; PT Serif è
-    # il serif umanista installato più vicino. I titoli restano quelli del template orange-book.
-    mainfont: "PT Serif"
-    toc: true
-    number-sections: true
-  docx:
-    reference-doc: assets/reference.docx
-    toc: true
-    number-sections: true
+    # dichiarazione di accessibilità e changelog: solo nel profilo "sito"
+    # (_quarto-sito.yml li accoda a questo elenco)

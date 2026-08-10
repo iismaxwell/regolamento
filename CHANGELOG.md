@@ -290,3 +290,19 @@ Delibera: CdI n. NN del GG/MM/AAAA (solo MAJOR/MINOR, da 1.0.0)
   che nominano un organo-tipo o un atto-tipo, non l'ente specifico («regolamento d'istituto»,
   «Consiglio d'istituto»). Regola raccolta in `STILE.md`.
 
+
+### Corretto (2026-08-10, pagine di servizio fuori da PDF e DOCX)
+
+- **Dichiarazione di accessibilità e changelog non compaiono più nei documenti
+  scaricabili**: sono pagine che descrivono il sito, non il regolamento, e nel PDF
+  e nel DOCX non hanno destinatario. Sostituiscono la soluzione precedente, che nei
+  due formati lasciava un'appendice con il solo titolo e un rimando alla pagina web:
+  in un libro Quarto la *conditional content* svuota il corpo del capitolo ma ne
+  lascia il titolo e la voce nell'indice. I due formati si generano ora da un profilo
+  di render proprio (`_quarto-stampa.yml`), con un elenco di allegati che si ferma ai
+  riferimenti normativi; il sito resta invariato e conserva entrambe le pagine.
+- **Comando di generazione**: due corse invece di una — `quarto render` per il sito,
+  `quarto render --profile stampa --no-clean` per PDF e DOCX (v. README § Come si
+  genera). Il workflow di pubblicazione è aggiornato di conseguenza.
+- **Riferimenti normativi**: il rinvio «v. changelog» in apertura di pagina precisa ora
+  che il changelog sta sul sito, dato che nei documenti scaricabili non c'è.

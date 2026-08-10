@@ -16,6 +16,12 @@ chiedere a Marco di aprirla dalla radice del progetto.
 - La versione compare in più punti da tenere allineati: l'intestazione più
   recente di `CHANGELOG.md` e, in `_quarto.yml`, il `subtitle` del libro, il
   badge in `book.navbar.right` e il testo in `book.page-footer.center`.
+- **Due profili di render**, non uno: `quarto render` fa il sito,
+  `quarto render --profile stampa --no-clean` vi aggiunge PDF e DOCX (in
+  quest'ordine: la prima corsa ripulisce `_book/`). Il profilo `stampa` non ha
+  la dichiarazione di accessibilità né il changelog, che descrivono il sito e
+  non il regolamento; un nuovo capitolo va aggiunto a `_quarto.yml`, non ai
+  profili, se deve stare in tutti i formati. V. README § Come si genera.
 - Stile e tipografia: `STILE.md`, sempre.
 - Riferimenti normativi: mai a memoria; se non è verificabile, marcare
   `<!-- TODO-VERIFICA -->` e segnalarlo.

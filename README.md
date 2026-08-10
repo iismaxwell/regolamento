@@ -37,12 +37,21 @@ Con [Quarto](https://quarto.org) installato (richiede anche Typst, incluso
 nella distribuzione Quarto):
 
 ```sh
-quarto render                  # i tre formati insieme in _book/
-quarto render --to html        # solo il sito
-quarto render --to typst       # solo il PDF
-quarto render --to docx        # solo il DOCX (usa assets/reference.docx)
-quarto preview                 # anteprima locale del sito, con ricarica automatica
+quarto render                              # il sito in _book/
+quarto render --profile stampa --no-clean  # vi aggiunge PDF e DOCX
+quarto preview                             # anteprima locale del sito, con ricarica automatica
 ```
+
+Le due corse vanno in quest'ordine: la prima ripulisce `_book/` e genera il
+sito, la seconda vi affianca i due documenti (senza `--no-clean` cancellerebbe
+il sito appena prodotto).
+
+Sono corse distinte perché il documento scaricabile non contiene tutto il sito:
+la **dichiarazione di accessibilità** e il **changelog** descrivono il sito, non
+il regolamento, e restano fuori da PDF e DOCX. In un libro Quarto un capitolo non
+si può escludere per formato, quindi i due profili di render — `sito`
+(predefinito, `_quarto-sito.yml`) e `stampa` (`_quarto-stampa.yml`) — dichiarano
+elenchi di allegati e formati diversi; `_quarto.yml` tiene ciò che hanno in comune.
 
 Il sito (`_book/index.html` e seguenti) è pubblicato su GitHub Pages a ogni
 push su `main` (`.github/workflows/publish.yml`). Quando si crea un tag

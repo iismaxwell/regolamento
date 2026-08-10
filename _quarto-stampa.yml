@@ -1,0 +1,19 @@
+# Profilo "stampa": PDF (Typst) e DOCX scaricabili dal sito.
+#   quarto render --profile stampa
+#
+# Qui non compare il formato html: il profilo produce solo i due documenti, e la
+# corsa non tocca le pagine del sito già generate. Gli allegati sono quelli di
+# _quarto.yml, cioè senza dichiarazione di accessibilità e changelog (v. _quarto-sito.yml).
+
+format:
+  typst:
+    logo: assets/logo.png
+    # Coerenza col corpo HTML (specifica §7): Lora non è installato per Typst; PT Serif è
+    # il serif umanista installato più vicino. I titoli restano quelli del template orange-book.
+    mainfont: "PT Serif"
+    toc: true
+    number-sections: true
+  docx:
+    reference-doc: assets/reference.docx
+    toc: true
+    number-sections: true

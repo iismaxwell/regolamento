@@ -3,7 +3,7 @@
 Elenco delle fonti normative citate nel regolamento, con link al testo vigente su
 [Normattiva](https://www.normattiva.it) o, per il diritto dell'Unione europea, su
 [EUR-Lex](https://eur-lex.europa.eu). Gli estremi sono quelli verificati sulle fonti
-primarie in fase di redazione (v. changelog).
+primarie in fase di redazione (v. il changelog, sul sito del regolamento).
 
 ## Costituzione e codice civile
 

@@ -16,7 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: quarto-dev/quarto-actions/setup@v2
+      # Due corse, in quest'ordine: la prima genera il sito e ripulisce _book/,
+      # la seconda vi aggiunge PDF e DOCX (--no-clean, altrimenti cancellerebbe
+      # il sito appena prodotto). I due profili sono in _quarto-sito.yml e
+      # _quarto-stampa.yml; v. README § Come si genera.
       - run: quarto render
+      - run: quarto render --profile stampa --no-clean
       - uses: actions/upload-artifact@v4
         with:
           name: book
